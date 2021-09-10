@@ -69,14 +69,14 @@
     display: block;
   }
 
+  
   .slider {
     margin-top: 46px;
-    padding-top: 50%;
-    background-image: url('./img/la.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+  }
+  .slider-image {
     background-position: top center;
     position: relative;
+    width: 100%;
   }
   .header div {
     cursor: pointer;
