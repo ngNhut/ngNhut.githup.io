@@ -72,7 +72,7 @@
   .slider {
     margin-top: 46px;
     padding-top: 50%;
-    background-image: url('/img/la.jpg');
+    background-image: url('./img/la.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
@@ -278,7 +278,6 @@ button:hover {
   margin: 32px 0;
 }
 .contact_box-left {
-  /* 234 */
   width: 50%;
 }
 .contact_box-right {
