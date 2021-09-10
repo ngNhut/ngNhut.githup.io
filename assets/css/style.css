@@ -75,7 +75,6 @@
   }
   .slider-image {
     background-position: top center;
-    position: relative;
     width: 100%;
   }
   .header div {
@@ -107,6 +106,10 @@
   .header__search:bar {
     background-color: #ccc;
     color: #000;
+  }
+
+  .wrapper {
+    position: relative;
   }
 
 .slider_slogan {
@@ -449,7 +452,7 @@ footer p {
     margin-bottom: 10px;
   }
 
-  .slider_solgan-content {
+  .slider_slogan {
     display: none;
   }
 
