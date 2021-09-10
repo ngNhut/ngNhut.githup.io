@@ -280,6 +280,8 @@ button:hover {
 }
 .contact_box-left {
   width: 50%;
+  /* width: auto; */
+
 }
 .contact_box-right {
   width: 50%;
