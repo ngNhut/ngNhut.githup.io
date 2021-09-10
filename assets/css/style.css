@@ -273,15 +273,12 @@ button:hover {
   padding: 64px 16px;
   margin: 0 auto;
 }
-
 #contact .contact_box {
   display: flex;
   margin: 32px 0;
 }
 .contact_box-left {
   width: 50%;
-  /* width: auto; */
-
 }
 .contact_box-right {
   width: 50%;
