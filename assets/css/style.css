@@ -178,6 +178,12 @@
   padding: 64px 16px;
   border-radius: 30px;
 }
+
+.content_section-1 .them{
+  line-height: 22.5px;
+  text-align: justify;
+}
+
 #content .content_section {
   margin: 0 auto;
   width: 800px;
