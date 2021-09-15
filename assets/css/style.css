@@ -10,6 +10,11 @@
     font-family: 'Lato', sans-serif;
     scroll-behavior: smooth;
   }
+
+  @font-face {
+    font-family: myFirstFont; ;
+    src: url(/assets/iCielBCSeinnaGrace-Regular.otf);
+  }
   
 
   #main {
@@ -29,7 +34,6 @@
   }
 
   .item {
-    padding: 12px 24px;
     height: 46px;
   }
   .item>a {
@@ -37,10 +41,15 @@
     color: #fff;
     font-size: 15px;
     text-transform: uppercase;
+    text-shadow: 1px 1px black;
+    display: block;
+    height: 46px;
+    padding: 12px 24px;
   }
 
   .item:hover {
-    background-color: #ccc;
+    background-color: #fff;
+    opacity: .9;
   }
   .item:hover a {
     color: black;
@@ -58,6 +67,7 @@
     background-color: #fff;
     box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
     min-width: 160px;
+    background-image:linear-gradient(351deg, #ed54ff30, #fbd78694, #f7797dd9);
   }
   .subnav_items a {
     color: black;
@@ -68,7 +78,8 @@
     padding: 8px 16px;
   }
   .subnav_items:hover {
-    background-color: #ccc;
+    background-color: #fff;
+    opacity: .9;
   }
   .items:hover .subnav {
     display: block;
@@ -81,8 +92,7 @@
     width: 100%;
     padding-top: 60%;
     background-size: cover;
-    background-repeat: 
-
+    /* background-repeat: repeat; */
   }
   /* .slider-image {
     background-position: top center;
@@ -126,15 +136,34 @@
 .slider_slogan {
   position: absolute;
   color: #fff;
-  bottom: 32px;
   width: 100%;
   text-align: center;
+  font-family: myFirstFont; 
+  bottom: 402px;
+  animation: fade 1.6s linear;
+  text-shadow: 5px 2px black;
+  /* opacity: 0; */
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+    color: rgb(203, 30, 209);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .slider_slogan-header {
   font-weight: 400;
   margin-bottom: 25px;
-  font-size: 130px;
+  font-family: myFirstFont; 
+  word-spacing: 20px;
+  font-size: 87px;
+ 
 }
 
 .slider_solgan-content {
@@ -194,10 +223,19 @@
 }
 .member {
   margin-top: 30px;
+  opacity: 0;
+  transition: all 1000ms ease-in;
+  transform: translateX(-20%);
+}
+.member.appear {
+  opacity: 1;
+  transform: translateX(0);
 }
 
+
+
 .member img {
-  width: 93%;
+  width: 70%;
   border-radius: 50px;
 }
 .member p:first-child {
@@ -207,7 +245,8 @@
 
 .member p:nth-child(3) {
   font-style: italic;
-  opacity: 0.5;
+  opacity: 0.7;
+  margin-top: 10px;
 }
  .contain_tour {
  }
@@ -383,7 +422,6 @@ footer p {
 .modal_heading {
   min-width: 50%;
   min-height: 129px;
-  background-color: #009688;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -391,6 +429,10 @@ footer p {
   font-size: 30px;
   letter-spacing: 4px;
   position: relative;
+  background-image: linear-gradient(
+265deg
+, #ed54ffb5, #fbd78694,#f7797d);
+text-shadow: 2px 3px #3333338c;
 }
 
 .fa.fa-suitcase {
@@ -431,7 +473,7 @@ footer p {
 
 .modal_btn {
   width: 100%;
-  background-color: #009688;
+  background-color: #b02ec3ba;
   color: #fff;
   padding: 16px;
   margin:16px 0;
@@ -487,12 +529,6 @@ footer p {
   /* .slider_slogan {
     display: none;
   } */
-  .slider_slogan{
-    width: 50%;
-    left: 220px;
-    bottom: 90px;
-    text-shadow: 1px 1px #1824df;
-  }
   .header__bar {
     display: block;
   }
@@ -537,27 +573,64 @@ footer p {
   }
 
 }
+@media (min-width:768px) and (max-width:1023px) {
+  .slider_slogan{
+    width: 50%;
+    left: 400px;
+    bottom: 200px;
+    text-shadow: 1px 1px #1824df;
+}
+.slider_slogan-header {
+  font-weight: 400;
+  margin-bottom: 25px;
+  word-spacing: 20px;
+  font-size: 80px;
+ 
+}
 
-@media (max-width: 425px) {
+}
+
+@media (min-width: 425px) and (max-width:767px) {
 
   .slider_slogan{
       width: 50%;
-      left: 220px;
-      bottom: 90px;
+      left: 200px;
+      bottom: 107px;
       text-shadow: 1px 1px #1824df;
+  }
+  .slider_slogan-header {
+    font-weight: 400;
+    margin-bottom: 25px;
+    word-spacing: 20px;
+    font-size: 40px;
+   
+  }
 }
 
-@media (max-width: 425px) {
+@media (min-width:320px) and (max-width: 425px) {
   .slider_slogan{
     width: 50%;
     left: 182px;
     bottom: 60px;
     text-shadow: 1px 1px #1824df; 
+  }
+  .slider_slogan-header {
+    font-weight: 400;
+    margin-bottom: 25px;
+    word-spacing: 20px;
+    font-size: 30px;
+  }
 }
+
 @media (max-width: 320px) {
   .slider_slogan{
     width: 50%;
     left: 154px;
     bottom: 64px;
     text-shadow: 1px 1px #1824df; 
+  }
+  .slider_slogan-header {
+    font-size: 38px;
+   
+  }
 }
